@@ -1,0 +1,22 @@
+{
+  "id": "accelerando-8192",
+  "title": {
+    "en": "accelerando-8192",
+    "zh": "渐快符文8192"
+  },
+  "intro": {
+    "en": "An on-device alien alphabet of 8,192 angular mint glyphs. Swipe the atlas, tap a mark into the line, or type with the on-screen keys. Copy the glyphs or save an SVG without leaving the phone.",
+    "zh": "一部留在手机里的外星字母表，共 8192 个薄荷绿折线符文。滑动字表，点按把符文送进句子，或用屏幕键盘打字。复制字形、保存 SVG 都不离开这台设备。"
+  },
+  "officialFiles": [
+    "vendor/index.html",
+    "vendor/style.css",
+    "vendor/app.mjs",
+    "vendor/glyphs.mjs",
+    "vendor/alphabet.json",
+    "vendor/LICENSE.txt"
+  ],
+  "playHtml": "play.html",
+  "aspect": "phone",
+  "githubRepo": "ypaaaaaaaaaaaaa/accelerando-8192"
+}
