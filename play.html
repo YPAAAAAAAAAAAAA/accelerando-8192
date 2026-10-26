@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>accelerando-8192</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23071510'/%3E%3Cpath d='M3 13 L8 3 L13 13' fill='none' stroke='%23c9ffe6' stroke-width='1.4'/%3E%3C/svg%3E">
+<base href="vendor/">
+<link rel="stylesheet" href="style.css">
+<link rel="prefetch" href="alphabet.json">
+<link rel="prefetch" href="LICENSE.txt">
+<script src="/sandbox/_ready.js"></script>
+</head>
+<body>
+<div id="stage">
+  <div id="hero"></div>
+  <p id="gloss"></p>
+  <div id="atlas" aria-label="Glyph atlas"></div>
+  <p id="hint"><span id="how">swipe the sheet · tap a glyph</span><span id="credit">idea after @gillverd (gillverd/accelerando-8192); clean-room implementation, no code copied</span></p>
+</div>
+<button id="opener" type="button" aria-label="Show encoder" aria-expanded="false">
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+    <path d="M4 8 L12 4 L20 9 M4 13 L12 17 L20 12 M6 19 L12 21 L18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter"/>
+  </svg>
+</button>
+<div id="panel">
+  <textarea id="readout" maxlength="240" rows="2" inputmode="none" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Text to encode"></textarea>
+  <div class="acts">
+    <button type="button" data-k="copy">Copy glyphs</button>
+    <button type="button" data-k="save">Save SVG</button>
+    <button type="button" data-k="clear">Clear</button>
+  </div>
+  <div id="keys">
+    <div class="row">
+      <button type="button" data-k="q">q</button>
+      <button type="button" data-k="w">w</button>
+      <button type="button" data-k="e">e</button>
+      <button type="button" data-k="r">r</button>
+      <button type="button" data-k="t">t</button>
+      <button type="button" data-k="y">y</button>
+      <button type="button" data-k="u">u</button>
+      <button type="button" data-k="i">i</button>
+      <button type="button" data-k="o">o</button>
+      <button type="button" data-k="p">p</button>
+    </div>
+    <div class="row">
+      <button type="button" data-k="a">a</button>
+      <button type="button" data-k="s">s</button>
+      <button type="button" data-k="d">d</button>
+      <button type="button" data-k="f">f</button>
+      <button type="button" data-k="g">g</button>
+      <button type="button" data-k="h">h</button>
+      <button type="button" data-k="j">j</button>
+      <button type="button" data-k="k">k</button>
+      <button type="button" data-k="l">l</button>
+    </div>
+    <div class="row">
+      <button type="button" class="wide" data-k="shift">Aa</button>
+      <button type="button" data-k="z">z</button>
+      <button type="button" data-k="x">x</button>
+      <button type="button" data-k="c">c</button>
+      <button type="button" data-k="v">v</button>
+      <button type="button" data-k="b">b</button>
+      <button type="button" data-k="n">n</button>
+      <button type="button" data-k="m">m</button>
+      <button type="button" class="wide" data-k="bksp" aria-label="Backspace">⌫</button>
+    </div>
+    <div class="row">
+      <button type="button" class="space" data-k="space">space</button>
+      <button type="button" data-k=".">.</button>
+      <button type="button" data-k=",">,</button>
+      <button type="button" data-k="?">?</button>
+      <button type="button" data-k="!">!</button>
+      <button type="button" data-k="'">'</button>
+    </div>
+  </div>
+  <input id="find" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="search tokens" aria-label="Search tokens">
+  <p id="note">keys encode · copy and save stay on this device</p>
+</div>
+<script type="module" src="glyphs.mjs"></script>
+<script type="module" src="app.mjs"></script>
+</body>
+</html>
